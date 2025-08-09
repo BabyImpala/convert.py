@@ -811,7 +811,8 @@ class Editors:
                     json_data["name"] = anim_dir_name
                     changes_made = True
                 # Fix type-type gender
-                changes_made = fix_typegender(json_data)
+                if fix_typegender(json_data):
+                    changes_made = True
                 # Edit the SLAL json
                 if changes_made:
                     json_file.seek(0)
