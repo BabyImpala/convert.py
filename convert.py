@@ -1,4 +1,4 @@
-# Script Version: 0.9e (to be used with SLSB v1.5.3+)
+# Script Version: 0.9f (to be used with SLSB v1.5.3)
 from typing import ClassVar, Iterable
 from datetime import datetime
 from pprint import pprint
@@ -304,7 +304,7 @@ class SLATE:
             TagToAdd = ''
             TagToRemove = ''
             for entry in StoredData.slate_logs_data:
-                if name.lower() in entry['anim'].lower():
+                if name.lower() == entry['anim'].lower():
                     if entry['action'].lower() == 'addtag':
                         TagToAdd = entry['tag'].lower()
                         if TagToAdd not in tags:
